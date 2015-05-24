@@ -11,12 +11,10 @@ class NucleotideTest < Minitest::Test
   end
 
   def test_counts_only_thymidine
-    skip
     assert_equal 1, Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
   end
 
   def test_counts_a_nucleotide_only_once
-    skip
     dna = Nucleotide.from_dna('CGATTGGG')
     dna.count('T')
     dna.count('T')
@@ -44,7 +42,6 @@ class NucleotideTest < Minitest::Test
   end
 
   def test_validates_dna
-    skip
     assert_raises ArgumentError do
       Nucleotide.from_dna('JOHNNYAPPLESEED')
     end
