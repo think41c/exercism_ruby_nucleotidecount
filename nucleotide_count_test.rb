@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'nucleotide_count'
 
 class NucleotideTest < Minitest::Test

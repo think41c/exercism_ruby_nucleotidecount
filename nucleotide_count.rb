@@ -1,13 +1,22 @@
 class Nucleotide
   def self.from_dna(strand)
     raise ArgumentError, "Invalid RNA nucleotide." if strand.chars.include?("J") 
-    nucleotides = strand
-    nucleotides
+    strand
+    Nucleotide.new(strand)
+    strand
+  end
+
+  def initialize(x)
   end
 
   def self.histogram
-    a = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
+  end
+
+  def histogram
   end
 
 end
+
+# dna = Nucleotide.from_dna("A").histogram
+
 
