@@ -12,21 +12,17 @@ class Nucleotide
     @x = x
   end
 
-  def count(x)
+  def count(y)
     puts "This is @x -> #{@x}"
+    puts "This is @y -> #{y}"
     @x
   end
 
-  def self.histogram
-  end
-
   def histogram
+    puts "im here"
   end
 
 end
 
 p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-
-# dna = Nucleotide.from_dna("A").histogram
-# p dna
-
+# p dna = Nucleotide.from_dna("A").histogram
