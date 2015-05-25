@@ -5,12 +5,16 @@ class Nucleotide
     if strand.chars.any? { |x| invalid_nucleo.include?(x) }
       raise ArgumentError, "Invalid RNA nucleotide."  
     end
-
-    strand
-    # Nucleotide.new(strand)
+    Nucleotide.new(strand)
   end
 
   def initialize(x)
+    @x = x
+  end
+
+  def count(x)
+    puts "This is @x -> #{@x}"
+    @x
   end
 
   def self.histogram
@@ -20,6 +24,8 @@ class Nucleotide
   end
 
 end
+
+p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
 
 # dna = Nucleotide.from_dna("A").histogram
 # p dna
