@@ -12,9 +12,10 @@ class Nucleotide
     @x = x
   end
 
-  def count(y)
+  def count(letter_to_count)
     puts "This is @x -> #{@x}"
-    puts "This is @y -> #{y}"
+    puts "This is @y -> #{letter_to_count}"
+    p @x.chars.count(letter_to_count)
     @x
   end
 
@@ -25,4 +26,4 @@ class Nucleotide
 end
 
 p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-# p dna = Nucleotide.from_dna("A").histogram
+p dna = Nucleotide.from_dna("A").histogram
