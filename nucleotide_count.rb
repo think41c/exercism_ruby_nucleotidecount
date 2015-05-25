@@ -15,8 +15,7 @@ class Nucleotide
   def count(letter_to_count)
     puts "This is @x -> #{@x}"
     puts "This is @y -> #{letter_to_count}"
-    p @x.chars.count(letter_to_count)
-    @x
+    @x.chars.count(letter_to_count)
   end
 
   def histogram
