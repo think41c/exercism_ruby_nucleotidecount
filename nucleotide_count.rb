@@ -1,6 +1,7 @@
 class Nucleotide
   def self.from_dna(strand)
-    if strand.chars.include?("J")
+    # if strand.chars.include?("J")
+    if strand.chars.any? { |x| ["J","D"].include?(x) }
       raise ArgumentError, "Invalid RNA nucleotide."  
     end
 
