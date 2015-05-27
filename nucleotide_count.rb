@@ -21,8 +21,6 @@ class Nucleotide
   def histogram
     puts "im here"
   end
-
 end
-
-p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-p dna = Nucleotide.from_dna("A").histogram
+# p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
+# p dna = Nucleotide.from_dna("A").histogram
