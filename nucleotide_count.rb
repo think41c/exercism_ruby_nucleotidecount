@@ -1,6 +1,5 @@
 class Nucleotide
   def self.from_dna(strand)
-    valid_nucleo = %w(A G C T)
     invalid_nucleo = %w(B D E F H I J K L M N O P Q R S U V W X Y Z)
     if strand.chars.any? { |x| invalid_nucleo.include?(x) }
       raise ArgumentError, "Invalid RNA nucleotide."  
@@ -18,7 +17,6 @@ class Nucleotide
   end
 
   def histogram
-    puts @x
     expected = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
     @x.chars.each do |x|
       expected[x] += 1
@@ -26,5 +24,3 @@ class Nucleotide
     expected
   end
 end
-# p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-# p dna = Nucleotide.from_dna("ATC").histogram
