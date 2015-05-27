@@ -23,12 +23,15 @@ class Nucleotide
     puts "Hello BBBZZ"
     puts @x
     puts "hi b"
+    expected = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
     @x.chars.each do |x|
       p "This is the letter we're on #{x}"
+      expected[x] = 1
+      puts expected[x]
+      puts expected
     end
     puts @letter_to_count
-    expected = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
-
+    expected
   end
 end
 # p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
