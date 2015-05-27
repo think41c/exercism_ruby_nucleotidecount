@@ -12,7 +12,6 @@ class Nucleotide
   end
 
   def count(letter_to_count)
-    @letter_to_count = letter_to_count
     @x.chars.count(letter_to_count)
   end
 
