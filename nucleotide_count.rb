@@ -7,17 +7,17 @@ class Nucleotide
     Nucleotide.new(strand)
   end
 
-  def initialize(x)
-    @x = x
+  def initialize(dna)
+    @dna = dna
   end
 
   def count(letter_to_count)
-    @x.chars.count(letter_to_count)
+    @dna.chars.count(letter_to_count)
   end
 
   def histogram
     expected = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
-    @x.chars.each do |x|
+    @dna.chars.each do |x|
       expected[x] += 1
     end
     expected
