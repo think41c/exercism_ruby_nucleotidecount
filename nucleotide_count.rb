@@ -20,12 +20,16 @@ class Nucleotide
   end
 
   def histogram
+    puts "Hello BBBZZ"
     puts @x
     puts "hi b"
+    @x.chars.each do |x|
+      p "This is the letter we're on #{x}"
+    end
     puts @letter_to_count
     expected = { 'A' => 0, 'T' => 0, 'C' => 0, 'G' => 0 }
 
   end
 end
 # p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-p dna = Nucleotide.from_dna("A").histogram
+p dna = Nucleotide.from_dna("AT").histogram
