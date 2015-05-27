@@ -27,4 +27,4 @@ class Nucleotide
   end
 end
 # p Nucleotide.from_dna('GGGGGTAACCCGG').count('T')
-p dna = Nucleotide.from_dna("ATC").histogram
+# p dna = Nucleotide.from_dna("ATC").histogram
