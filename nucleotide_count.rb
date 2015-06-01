@@ -1,7 +1,7 @@
 class Nucleotide
   def self.from_dna(strand)
     valid_nucleo = %w(A G C T)
-    if strand.chars.any? { |x| !valid_nucleo.include?(x) }
+    unless strand.chars.all? { |x| valid_nucleo.include?(x) }
       raise ArgumentError, "Invalid RNA nucleotide."  
     end
     Nucleotide.new(strand)
